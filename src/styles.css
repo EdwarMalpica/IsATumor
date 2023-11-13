@@ -1,6 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
-@import "primeng/resources/themes/vela-green/theme.css";
-@import "primeng/resources/primeng.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --dark-blue: rgba(25, 42, 86, 1);
+  --medium-blue: rgba(44, 62, 80, 1);
+  --light-blue: rgba(52, 152, 219, 1);
+  --sky-blue: rgba(93, 173, 226, 1);
+  --pale-blue: rgba(169, 204, 227, 1);
+  --dark-blue-20:rgba(25, 42, 86, 0.2);
+  --medium-blue-20:rgba(44, 62, 80, 0.2);
+  --light-blue-20:rgba(52, 152, 219, 0.2);
+  --sky-blue-20:rgba(93, 173, 226, 0.2);
+  --pale-blue-20:rgba(169, 204, 227, 0.2);
+  --dark-blue-40:rgba(25, 42, 86, 0.4);
+  --font-family: 'Quicsand', sans-serif;
+  --bg-primary: rgb(241, 245, 249);
+}
+
+*{
+  font-family: var(--font-family);
+}
+body{
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+}
