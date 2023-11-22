@@ -1,0 +1,33 @@
+<div class="flex flex-col items-center justify-evenly mt-32 min-h-screen min-w-screen">
+    <h2>
+      Conoce ahora mismo si podrías tener alguno de estos tumores
+    </h2>
+  <div class="flex w-full h-ful items-evenly mt-32 gap-10 px-32">
+    <div class="w-3/6 flex h-full justify-center flex-col items-center">
+      <h3 class="font-bold text-lg mb-10">
+        Sube aquí una imagen de una resonancia magnética de tu cerebro
+      </h3>
+      <p-fileUpload name="demo[]" class="w-full" (onSelect)="onUpload($event)" [chooseLabel]="'Selecciona tu imagen'" [showCancelButton]="false" [showUploadButton]="false"
+        [multiple]="false" accept="image/*" >
+        <ng-template pTemplate="content">
+          <ul *ngIf="uploadedFiles.length">
+            <li *ngFor="let file of uploadedFiles">{{ file.name }} - {{ file.size }} bytes</li>
+          </ul>
+        </ng-template>
+      </p-fileUpload>
+      <button class="btn btn-primary mt-10" (click)="analiceImage()">
+         <app-loader-button *ngIf="isLoaded"></app-loader-button>
+         <label for="" *ngIf="!isLoaded">Analizar imagen</label>
+        </button>
+    </div>
+    <div class="w-3/6 flex flex-col items-center" >
+      <div class="w-full flex flex-col items-center" *ngIf="resultado">
+      <h3 class="font-bold text-lg mb-10">Resultados:</h3>
+      <h3>{{formatResultadoTitle(resultado)}}</h3>
+      <label for="">Con una probabilidad de {{probabilidad}}</label>
+      <img id="imgRest" [src]="url"  alt="">
+      <p>{{formatResultado(resultado)}}</p>
+      </div>
+    </div>
+  </div>
+</div>
