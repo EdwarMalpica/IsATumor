@@ -27,3 +27,22 @@ body{
   background-color: var(--bg-primary);
   min-height: 100vh;
 }
+h2{
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin: 0px;
+  line-height: 0.9;
+}
+.btn{
+  background-color: var(--light-blue);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+  background-color: var(--sky-blue);
+}

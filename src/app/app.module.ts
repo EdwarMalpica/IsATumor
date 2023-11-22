@@ -12,13 +12,16 @@ import { SplashAnimationComponent } from './splash-animation/splash-animation.co
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { UploadImageComponent } from './upload-image/upload-image.component';
-
+import { ArticleComponent } from './article/article.component';
+import { AnaliceImageComponent } from './analice-image/analice-image.component';
+import { FileUploadModule } from 'primeng/fileupload';
+import { LoaderButtonComponent } from './loader-button/loader-button.component';
 // Export this function
 export function playerFactory(): any {
   return import('lottie-web');
 }
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, SplashAnimationComponent, UploadImageComponent],
+  declarations: [AppComponent, HeaderComponent, SplashAnimationComponent, UploadImageComponent, ArticleComponent, AnaliceImageComponent, LoaderButtonComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -27,6 +30,7 @@ export function playerFactory(): any {
     ReactiveFormsModule,
     CalendarModule,
     ButtonModule,
+    FileUploadModule,
     LottieModule.forRoot({ player: playerFactory }),
   ],
   providers: [],
