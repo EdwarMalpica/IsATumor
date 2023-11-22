@@ -12,3 +12,16 @@ p{
   line-height: 1.5;
   text-align: center;
 }
+
+@media screen and (max-width:940px) {
+
+}
+svg{
+  position: relative !important;
+}
+image
+{
+  position: absolute !important;
+  top: 0;
+  height: 100%;
+}
